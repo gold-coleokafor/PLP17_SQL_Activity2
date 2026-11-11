@@ -4,8 +4,8 @@ USE airline_db;
 
 SELECT passengers.name,
        passengers.destination,
-       bookings.tier
+       bookings.class_tier
 FROM passengers
 JOIN bookings
     ON passengers.passenger_id=bookings.passenger_id
-WHERE bookings.tier IN ('Business' , 'First');
+WHERE bookings.class_tier IN ('Business' , 'First');
