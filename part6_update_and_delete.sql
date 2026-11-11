@@ -16,7 +16,6 @@ WHERE booking_id = 1;
 DELETE FROM bookings
 WHERE booking_id = 2;
 
--- Delete a passenger. Their booking, if any, is also deleted because
--- the foreign key is defined with ON DELETE CASCADE.
+-- Delete a passenger. Their booking, if any.
 DELETE FROM passengers
 WHERE passenger_id = 3;
