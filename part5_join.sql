@@ -4,10 +4,12 @@ USE airline_db;
 
 SELECT passengers.name,
        passengers.destination,
-       bookings.tier,
-       bookings.perks  -- PLACEHOLDER: swap in the real perks column once Person 2 defines bookings
+       bookings.class_tier,
+       bookings.lounge_pass_code,
+       bookings.suite_number,
+       bookings.chauffeur_service 
 FROM passengers
-JOIN bookings
+INNER JOIN bookings
     ON passengers.passenger_id = bookings.passenger_id;
 -- this is for all passengers if we need to print one at a time we could use the following
 -- WHERE passengers.passenger_id = 1; (replace 1 with passengers id)--
